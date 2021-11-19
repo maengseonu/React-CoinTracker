@@ -23,8 +23,12 @@ const Container = styled.div`
 const Header = styled.header`
   height: 10vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+`;
+
+const Back = styled.div`
+  width: 33%;
+  font-size: 30px;
 `;
 
 const Loader = styled.span`
@@ -190,7 +194,11 @@ function Coin() {
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
         </title>
       </Helmet>
+
       <Header>
+        <Back>
+          <Link to={"/"}>&larr;</Link>
+        </Back>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}
         </Title>
