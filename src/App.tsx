@@ -60,6 +60,8 @@ body {
 }
 a{
   text-decoration: none;
+  color: inherit;
+  font-weight: 600;
 }
 `;
 
