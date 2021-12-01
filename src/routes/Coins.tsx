@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { fetchCoins } from "./api";
-import { Interface } from "readline";
 import { useSetRecoilState } from "recoil";
 import { isDarkAtom } from "./atoms";
 
@@ -85,7 +83,7 @@ function Coins() {
         <button onClick={toggleDarkAtom}>모드 전환</button>
       </Header>
       {isLoading ? (
-        <Loader>"Loading..."</Loader>
+        <Loader>"Loading...."</Loader>
       ) : (
         <CoinsList>
           {data?.slice(0, 100).map((coin) => (
