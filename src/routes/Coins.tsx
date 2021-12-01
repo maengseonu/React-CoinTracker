@@ -83,7 +83,7 @@ function Coins() {
         <button onClick={toggleDarkAtom}>모드 전환</button>
       </Header>
       {isLoading ? (
-        <Loader>"Loading...."</Loader>
+        <Loader>"Loading..."</Loader>
       ) : (
         <CoinsList>
           {data?.slice(0, 100).map((coin) => (
