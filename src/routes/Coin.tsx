@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useQuery } from "react-query";
 import { Helmet } from "react-helmet";
 import {
@@ -149,11 +148,10 @@ interface priceData {
   };
 }
 
-interface ICoinProps {}
-
-function Coin({}: ICoinProps) {
+function Coin() {
   const { coinId } = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
+
   const priceMatch = useRouteMatch("/:coinId/price");
   const chartMatch = useRouteMatch("/:coinId/chart");
 
